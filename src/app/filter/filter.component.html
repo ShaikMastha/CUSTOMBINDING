@@ -1,0 +1,19 @@
+<div class="filter-container">
+    <span>Filter:</span>
+
+    <input type="radio" name="filter" value="All" 
+    [(ngModel)]="selectedRadioButtonValue" 
+    (change)="this.onRadioButtonSelectionChanged()"
+   />
+    <span>{{'All Cars('+all+')'}}</span>
+
+    <input type="radio" name="filter" value="Sports" 
+    [(ngModel)]="selectedRadioButtonValue" 
+    (change)="this.onRadioButtonSelectionChanged()"/>
+    <span>{{'Sports('+sports+')'}}</span>
+
+    <input type="radio" name="filter" value="SUV" 
+    [(ngModel)]="selectedRadioButtonValue" 
+    (change)="this.onRadioButtonSelectionChanged()"/>
+    <span>{{'SUV('+suv+')'}}</span>
+</div>

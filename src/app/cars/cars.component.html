@@ -1,0 +1,35 @@
+<div>
+  <app-search 
+  (searchTextChanged)="onsearchTextChanged($event)"></app-search>
+  <app-filter
+   [all]="getTotalCars()"
+   [sports]="getTotalSports()"
+   [suv]=" getTotalSUV()"
+   (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+</div>
+<div class="car-grid">
+  <ng-container *ngFor="let car of cars">
+    <!-- *ngIf="carCountRadioButton === 'All' || carCountRadioButton === car.type" -->
+    <div class="car-container" *ngIf="searchText === '' || car.name.toLowerCase().includes(searchText)">
+      <div class="car-card">
+        <div class="car-image">
+          <img [src]="car.image" alt="{{car.name}}">
+        </div>
+        <div class="car-name">
+          <h4>{{car.name}}</h4>
+        </div>
+        <div class="car-description">
+          <p>{{car.description}}</p>
+        </div>
+        <div class="details">
+          <div class="car-type" [ngStyle]="{color: car.type === 'Sports' ? 'green' : 'red'}">{{car.type}}</div>
+          <div class="car-price">{{car.price}}</div>
+        </div>
+        <div class="car-button">
+          <button class="btn btn-buy">Buy Now</button>
+          <button class="btn btn-show">Show Details</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

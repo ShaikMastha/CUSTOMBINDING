@@ -1,0 +1,23 @@
+/* Search container styling */
+.search-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 8px; /* Space between label and input */
+    margin: 10px 0; /* Add spacing around the container */
+    justify-content: center;
+  }
+  
+  /* Text label styling */
+  .search-container span {
+    font-size: 1em; /* Readable text size */
+    color: #333; /* Neutral text color */
+  }
+  
+  /* Input field styling */
+  .search-container input[type="text"] {
+    padding: 5px 10px; /* Comfortable padding */
+    border: 1px solid #ccc; /* Simple border */
+    border-radius: 4px; /* Slightly rounded edges */
+    font-size: 1em; /* Consistent font size */
+  }
+  
